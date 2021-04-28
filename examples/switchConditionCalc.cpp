@@ -38,6 +38,11 @@ int main()
             results = fmod(num1,num2);
             break;
 
+        //for calculating the power of a number
+        case '^':
+            results = pow(num1, num2);
+            break;
+
         default:
             cout<<"Ooops, there was an error, please try again";
 
