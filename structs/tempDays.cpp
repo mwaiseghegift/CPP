@@ -10,19 +10,19 @@ struct temp {
 void printtemp(temp no_day);
 
 int main(){
-    int day_index;
+    int index;
 
-    for(day_index=0; day_index<3; day_index++){
+    for(index=0; index<3; index++){
         cout<<"Enter the day"<<endl;
-        cin>> day[day_index].week_day;
+        cin>> day[index].week_day;
         cout<<"Enter the temperature"<<endl;
-        cin>>day[day_index].day_temp;
+        cin>>day[index].day_temp;
     }
 
     cout<<"The temperature for the last three days of the week are"<<endl;
 
-    for(day_index=0; day_index<3; day_index++){
-        printtemp(day[day_index]);
+    for(index=0; index<3; index++){
+        printtemp(day[index]);
         }
     return 0;
 }
