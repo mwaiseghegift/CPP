@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+/*the following code returns a product of a number
+entered by the user*/
 
 int main(){
     int num1, num2, answer=1;
