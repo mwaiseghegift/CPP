@@ -3,12 +3,14 @@ using namespace std;
 
 
 int main(){
-    int num1, num2, answer;
+    int num1 = 9, num2 = 3, answer=1;
 
-    cout<<"Enter the numbers\n";
-    cin>>num1>>num2;
+    // cout<<"Enter the numbers\n";
+    // cin>>num1>>num2;
 
-    for(n=num2, n>0, num2--){
-        answer=num1*num1;
+    for(int n=1; n<=num2; n++){
+        answer=answer*num1;
+        cout<<answer<<endl;
     }
+    return 0;
 }
