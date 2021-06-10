@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//functions for the math
 int addition(int a, int b){
     return a + b;
 }
