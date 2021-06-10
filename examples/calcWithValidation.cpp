@@ -20,12 +20,12 @@ float divide(int a, int b){
 
 int main(){
     int num1, num2, choiceOperator;
-    cout<<"Enter the two numbers to operate\n";
+    cout<<"Enter the two numbers to operate"<<endl;
     cout<<"The fist number"<<endl;
     cin>>num1;
 
     if (num1 == NULL){
-        cout<<"Please enter the value\n";
+        cout<<"Please enter the value"<<endl;
         cin>>num1;
     }
     cout<<"Enter The second Number"<<endl;
@@ -52,7 +52,7 @@ int main(){
     }else if (choiceOperator==4){
         cout<<divide(num1, num2);
     }else
-        cout<<"You entered an invalis operator\n";
+        cout<<"You entered an invalis operator"<<endl;
 
     return 0;
 
