@@ -32,14 +32,14 @@ int main(){
     cin>>num2;
 
     if (num2 == NULL){
-        cout<<"Please enter the value\n";
+        cout<<"Please enter the value"<<endl;
         cin>>num2;
     }
 
     cout<<"Choose an operator\n1 for +\n2 for -\n3 for *\n4 for /\n";
     cin>>choiceOperator;
     if (choiceOperator==NULL){
-        cout<<"Please enter an operator\n";
+        cout<<"Please enter an operator"<<endl;
         cin>>choiceOperator;
     }
 
