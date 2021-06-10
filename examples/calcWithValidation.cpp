@@ -24,14 +24,15 @@ int main(){
     cin>>num1;
 
     if (num1 == NULL){
-        cout<<"Please enter the value";
+        cout<<"Please enter the value\n";
+        cin>>num1;
     }
     cout<<"Enter The second Number"<<endl;
     cin>>num2;
 
     if (num2 == NULL){
         cout<<"Please enter the value\n";
-        cin>>num1;
+        cin>>num2;
     }
 
     cout<<"Choose an operator\n1 for +\n2 for -\n3 for *\n4 for /\n";
