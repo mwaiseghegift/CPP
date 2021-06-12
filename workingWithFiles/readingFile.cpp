@@ -1,16 +1,20 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 using namespace std;
 
 int main(){
     ifstream file ("studentsData.txt"); //read the file
 
-    string names;
+    vector <string> names;
     string input;
 
     while(file>>input){
-        names.append(input);
+        names.push_back(input);
     }
 
-    for(string n: names)
+    for(string n:names){
+        cout<<n<<endl;
+    }
+    return 0;
 }
