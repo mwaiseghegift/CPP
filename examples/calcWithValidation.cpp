@@ -39,7 +39,22 @@ int main(){
     cout<<"Choose an operator\n1 for +\n2 for -\n3 for *\n4 for /\n";
     cin>>choiceOperator;
 
-    
+    switch(choiceOperator){
+        case 1:
+            addition(num1, num2);
+            break;
+        case 2:
+            subtract(num1, num2);
+            break;
+        case 3:
+            multiply(num1, num2);
+            break;
+        case 4:
+            divide(num1, num2);
+            break;
+        default:
+            cout<<"Wrong Inputs, Please try again";
+    }
 
     return 0;
 
