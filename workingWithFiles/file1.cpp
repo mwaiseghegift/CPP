@@ -10,13 +10,14 @@ int main(){
     cout<<"Enter participants\n";
     for(;;){
         char option;
-        char name[255];
+        string name;
         cout<<"Do you want to continue? y/n"<<endl;
         cin>>option;
 
         if (option=='y'){
             cout<<"Enter the name\n";
-            file<<name;
+            cin>>name;
+            file<<name<<endl;
         }
         else if (option=='n'){
             break;
@@ -25,3 +26,4 @@ int main(){
     return 0;
 
 }
+
