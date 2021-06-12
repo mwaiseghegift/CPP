@@ -10,13 +10,12 @@ int main(){
     cout<<"Enter participants\n";
     for(;;){
         char option;
-        string name;
+        char name[255];
         cout<<"Do you want to continue? y/n"<<endl;
         cin>>option;
 
         if (option=='y'){
             cout<<"Enter the name\n";
-            cin>>name;
             file<<name;
         }
         else if (option=='n'){
