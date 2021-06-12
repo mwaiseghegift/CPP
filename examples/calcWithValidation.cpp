@@ -24,10 +24,14 @@ int main(){
     cout<<"The fist number"<<endl;
     cin>>num1;
 
-    if (num1 == NULL){
-        cout<<"Please enter the value"<<endl;
-        cin>>num1;
+    while(!cin.good()){
+        cout<<"Error! please check out the input\n";
+        cin.clear();
+        
+        cout<<"Enter the number again\n";
+        
     }
+
     cout<<"Enter The second Number"<<endl;
     cin>>num2;
 
