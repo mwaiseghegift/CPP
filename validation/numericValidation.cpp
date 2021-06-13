@@ -19,7 +19,7 @@ int getChoice(){
         //get new input
         cout<<"Enter Choice\n\a";
         cin>>choice;
-    }
+    return choice;
 }
 
 int main(){
@@ -42,8 +42,7 @@ int main(){
                 cout<<"Wrong input...Try again";
         }
 
-        cout<<"Enter Choice: ";
-        cin>>choice;
+        choice = getChoice();
     }
     return 0;
 }
