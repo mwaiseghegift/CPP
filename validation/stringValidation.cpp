@@ -1,8 +1,8 @@
 #include <iostream>
-#include <algorithm>
+#include <algorithm> //for all_of
 #include <cctype>
 #include <string>
-#include <string_view>
+
 using namespace std;
 
 bool isNameValid(string name){
@@ -11,6 +11,16 @@ bool isNameValid(string name){
     });
 }
 
-i
+int main(){
+    string name{};
+
+    do {
+        cout<<"Enter the name: ";
+        getline(cin, name);
+    }while(!isNameValid(name));
+
+    cout<<"Did you really Enter "<<name<<endl;
+    return 0;
+}
 
 
