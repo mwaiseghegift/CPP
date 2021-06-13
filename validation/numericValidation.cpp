@@ -1,11 +1,12 @@
 #include <iostream>
+#include <iomanip> //input output manipulation
 using namespace std;
 
 int getChoice(){
     int choice;
 
     cout<<"Enter Choice\n\a";
-    cin>>choice;
+    cin>>setw(1)>>choice;
 
     //validation
     while(cin.good() == false){
@@ -18,7 +19,11 @@ int getChoice(){
 
         //get new input
         cout<<"Enter Choice\n\a";
-        cin>>choice;
+        cin>>setw(1)>>choice;
+    }
+     //clearing stream
+    cin.clear();
+    cin.ignore(INT32_MAX,'\n');
     return choice;
 }
 
@@ -39,7 +44,7 @@ int main(){
                 cout<<"You chose 3\n";
                 break;
             default:
-                cout<<"Wrong input...Try again";
+                cout<<"Wrong input...Try again\n";
         }
 
         choice = getChoice();
