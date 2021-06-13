@@ -1,11 +1,31 @@
 #include <iostream>
 using namespace std;
 
+int getChoice(){
+    int choice;
+
+    cout<<"Enter Choice\n\a";
+    cin>>choice;
+
+    //validation
+    while(cin.good() == false){
+        //error reporting
+        cout<<"Error! Please try again\n";
+
+        //clearing stream
+        cin.clear();
+        cin.ignore(INT32_MAX,'\n');
+
+        //get new input
+        cout<<"Enter Choice\n\a";
+        cin>>choice;
+    }
+}
+
 int main(){
     int choice;
 
-    cout<<"Enter Choice\n";
-    cin>>choice;
+    choice = getChoice();
 
     while(choice>0){
         switch(choice){
@@ -21,7 +41,7 @@ int main(){
             default:
                 cout<<"Wrong input...Try again";
         }
-        
+
         cout<<"Enter Choice: ";
         cin>>choice;
     }
