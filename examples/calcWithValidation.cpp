@@ -39,6 +39,23 @@ int num1Validated(){
     cin.ignore(INT32_MAX, '\n');
     return num1;
 }
+
+int num2Validated(){
+    int num2;
+    cout<<"Enter The second Number"<<endl;
+    cin>>num2;
+
+    while(!cin.good()){
+        cout<<"Oops! The second number must be a number\nPlease try again\n";
+        cin.clear();
+        cin.ignore(INT32_MAX,'\n');
+        cin>>num2;
+    }
+    cin.clear();
+    cin.ignore(INT32_MAX, '\n');
+    return num2;
+}
+
 //functions for the math
 int addition(int a, int b){
     return a + b;
@@ -60,12 +77,8 @@ int main(){
     int num1, num2;
     cout<<"Enter the two numbers to operate"<<endl;
     num1= num1Validated();
+    num2 = num2Validated();
 
-    cout<<"Enter The second Number"<<endl;
-    cin>>num2;
-
-
-    
     int choiceOperator=getChoice();
     switch(choiceOperator){
         case 1:
