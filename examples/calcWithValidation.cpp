@@ -8,7 +8,7 @@ int getChoice(){
     cin>>setw(1)>>choiceOperator;
 
     while(!cin.good()){
-        cout<<"Oops! Make sure your input is ok";
+        cout<<"Oops! Make sure your input is ok\n";
         cin.clear();
         cin.ignore(INT32_MAX, '\n');
 
@@ -18,6 +18,26 @@ int getChoice(){
     cin.clear();
     cin.ignore(INT32_MAX, '\n');
     return choiceOperator;
+}
+
+//num1 validation
+
+int num1Validated(){
+    int num1;
+    cout<<"The fist number"<<endl;
+    cin>>num1;
+
+    while(!cin.good()){
+        cout<<"Error! the input should be a number\n";
+        cin.clear();
+        cin.ignore(INT32_MAX, '\n');
+
+        cout<<"The fist number"<<endl;
+        cin>>num1;
+    }
+    cin.clear();
+    cin.ignore(INT32_MAX, '\n');
+    return num1;
 }
 //functions for the math
 int addition(int a, int b){
@@ -39,16 +59,7 @@ float divide(int a, int b){
 int main(){
     int num1, num2;
     cout<<"Enter the two numbers to operate"<<endl;
-    cout<<"The fist number"<<endl;
-    cin>>num1;
-
-    while(!cin.good()){
-        cout<<"Error! please check out the input\n";
-        cin.clear();
-        
-        cout<<"Enter the number again\n";
-        cin>>num1;
-    }
+    num1= num1Validated();
 
     cout<<"Enter The second Number"<<endl;
     cin>>num2;
