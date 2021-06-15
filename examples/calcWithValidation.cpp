@@ -74,7 +74,7 @@ float divide(int a, int b){
 }
 
 int main(){
-    int num1, num2;
+    int num1, num2, results;
     cout<<"Enter the two numbers to operate"<<endl;
     num1= num1Validated();
     num2 = num2Validated();
@@ -82,20 +82,22 @@ int main(){
     int choiceOperator=getChoice();
     switch(choiceOperator){
         case 1:
-            addition(num1, num2);
+            results = addition(num1, num2);
             break;
         case 2:
-            subtract(num1, num2);
+            results = subtract(num1, num2);
             break;
         case 3:
-            multiply(num1, num2);
+            results = multiply(num1, num2);
             break;
         case 4:
-            divide(num1, num2);
+            results = divide(num1, num2);
             break;
         default:
             cout<<"Wrong Inputs, Please try again";
     }
+
+    cout<<"The answer is: "<<results<<endl;
 
     return 0;
 
