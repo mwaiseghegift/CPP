@@ -40,6 +40,7 @@ int num1Validated(){
     return num1;
 }
 
+//num2 validation
 int num2Validated(){
     int num2;
     cout<<"Enter The second Number"<<endl;
@@ -51,6 +52,7 @@ int num2Validated(){
         cin.ignore(INT32_MAX,'\n');
         cin>>num2;
     }
+    //clearing cin
     cin.clear();
     cin.ignore(INT32_MAX, '\n');
     return num2;
@@ -97,7 +99,7 @@ int main(){
             cout<<"Wrong Inputs, Please try again";
     }
 
-    cout<<"The answer is: "<<results<<endl;
+    cout<<"\nThe answer is: "<<results<<endl;
 
     return 0;
 
