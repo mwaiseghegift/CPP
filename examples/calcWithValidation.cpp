@@ -1,6 +1,24 @@
 #include <iostream>
 using namespace std;
 
+int getChoice(){
+    int choiceOperator;
+    cout<<"Choose an operator\n1 for +\n2 for -\n3 for *\n4 for /\n";
+    cin>>choiceOperator;
+
+    while(!cin.good()){
+        cout<<"Oops! Make sure your input is ok";
+        cin.clear();
+        cin.ignore(INT32_MAX, '\n');
+
+        cout<<"Choose an operator\n1 for +\n2 for -\n3 for *\n4 for /\n";
+        cin>>choiceOperator;
+
+    }
+    cin.clear();
+    cin.ignore(INT32_MAX, '\n');
+    return choiceOperator;
+}
 //functions for the math
 int addition(int a, int b){
     return a + b;
@@ -19,7 +37,7 @@ float divide(int a, int b){
 }
 
 int main(){
-    int num1, num2, choiceOperator;
+    int num1, num2;
     cout<<"Enter the two numbers to operate"<<endl;
     cout<<"The fist number"<<endl;
     cin>>num1;
@@ -36,9 +54,8 @@ int main(){
     cin>>num2;
 
 
-    cout<<"Choose an operator\n1 for +\n2 for -\n3 for *\n4 for /\n";
-    cin>>choiceOperator;
-
+    
+    int choiceOperator=getChoice();
     switch(choiceOperator){
         case 1:
             addition(num1, num2);
