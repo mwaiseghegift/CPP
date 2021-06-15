@@ -1,10 +1,11 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int getChoice(){
     int choiceOperator;
     cout<<"Choose an operator\n1 for +\n2 for -\n3 for *\n4 for /\n";
-    cin>>choiceOperator;
+    cin>>setw(1)>>choiceOperator;
 
     while(!cin.good()){
         cout<<"Oops! Make sure your input is ok";
@@ -12,8 +13,7 @@ int getChoice(){
         cin.ignore(INT32_MAX, '\n');
 
         cout<<"Choose an operator\n1 for +\n2 for -\n3 for *\n4 for /\n";
-        cin>>choiceOperator;
-
+        cin>>setw(1)>>choiceOperator;
     }
     cin.clear();
     cin.ignore(INT32_MAX, '\n');
