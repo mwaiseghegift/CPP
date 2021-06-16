@@ -19,7 +19,7 @@ int main(){
         }
 
     }
-    catch(int thePrice){
+    catch(long int thePrice){
         std::cout<<"Please upgrade your car to be able to join\n";
         std::cout<<"The value of your car is "<<minCarWorth-thePrice<<" less the min price";
     }
