@@ -7,7 +7,7 @@ class customers{
     int age;
 
     public:
-    //constructor inside a class
+    //constructor definition
         customers(string a, int b){
             fname = a;
             age = b;
