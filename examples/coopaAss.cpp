@@ -17,3 +17,16 @@ void relationalOperation(string s1, string s2)
     else
         cout << s1 << " is equal to " << s2 << endl;
 }
+
+class String
+{
+    private:
+        char *s;
+        int size;
+    public:
+        String(const char *str = NULL);
+        ~String() { delete [] s; }
+        String(const String&);
+        void print() { cout << s << endl; }
+        void change(const char *);
+    };
