@@ -45,3 +45,10 @@ void String::change(const char *str)
 	s = new char[size+1];
 	strcpy(s, str);
 }
+
+String::String(const String& old_str)
+{
+	size = old_str.size;
+	s = new char[size+1];
+	strcpy(s, old_str.s);
+}
