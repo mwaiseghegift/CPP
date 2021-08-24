@@ -52,3 +52,31 @@ String::String(const String& old_str)
 	s = new char[size+1];
 	strcpy(s, old_str.s);
 }
+
+int main()
+{
+	string S1 = "Almighty";
+	string S2 = "University";
+
+	char s3[30];
+
+	S2 = S1+S2;
+	cout<<"Copied text "<<S2<<"\n";
+
+	//finding "Univ" in S2
+
+    size_t findUniv = S2.find("Univ");
+
+	if ( findUniv != string::npos){
+        cout<<"Found";
+	}
+
+	//Compaire s1 and s2
+
+	if (S1.compare(S2) != 0){
+        cout<<"\nThe strings are the same";
+	}else
+        cout<<"\nThe Strings are different";
+
+    return EXIT_SUCCESS;
+}
