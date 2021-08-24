@@ -30,3 +30,18 @@ class String
         void print() { cout << s << endl; }
         void change(const char *);
     };
+
+String::String(const char *str)
+{
+	size = strlen(str);
+	s = new char[size+1];
+	strcpy(s, str);
+}
+
+void String::change(const char *str)
+{
+	delete [] s;
+	size = strlen(str);
+	s = new char[size+1];
+	strcpy(s, str);
+}
