@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
 using namespace std;
 const int maxN = 11;
 const int maxM = 1001;

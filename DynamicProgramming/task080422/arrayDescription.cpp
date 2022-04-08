@@ -1,12 +1,11 @@
 #include <iostream>
 
 using namespace std;
-const int maxN = 1e5;
-const int maxM = 100;
+const int maximumN = 1e5;
+const int maximumM = 100;
 const long MOD = 1e9+7;
-
-int N, M, x[maxN+1];
-long ans, dp[maxN+1][maxM+1];
+int N, M, x[maximumN+1];
+long ans, dp[maximumN+1][maximumM+1];
 
 int main(){
     scanf("%d %d", &N, &M);
@@ -26,7 +25,6 @@ int main(){
                 dp[i][z] += dp[i-1][z+1];
             dp[i][z] %= MOD;
         }
-
         if(x[i])
             for(int z = 0; z <= M; z++)
                 if(z != x[i])
