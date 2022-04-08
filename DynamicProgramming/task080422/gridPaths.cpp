@@ -18,8 +18,10 @@ int main(){
     for(int i = 1; i <= N; i++){
         for(int z = 1; z <= N; z++){
             if(c[i][z] == '.'){
-                if(c[i-1][z] == '.')    dp[i][z] += dp[i-1][z];
-                if(c[i][z-1] == '.')    dp[i][z] += dp[i][z-1];
+                if(c[i-1][z] == '.')
+                    dp[i][z] += dp[i-1][z];
+                if(c[i][z-1] == '.')
+                    dp[i][z] += dp[i][z-1];
                 dp[i][z] %= MOD;
             }
         }

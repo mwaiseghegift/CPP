@@ -20,8 +20,10 @@ int main(){
     for(int i = 2; i <= N; i++){
         for(int z = 1; z <= M; z++){
             dp[i][z] = dp[i-1][z];
-            if(z != 1)  dp[i][z] += dp[i-1][z-1];
-            if(z != M)  dp[i][z] += dp[i-1][z+1];
+            if(z != 1)  
+                dp[i][z] += dp[i-1][z-1];
+            if(z != M)  
+                dp[i][z] += dp[i-1][z+1];
             dp[i][z] %= MOD;
         }
 
