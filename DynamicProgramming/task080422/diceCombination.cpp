@@ -15,4 +15,5 @@ int main(){
             dp[i] = (dp[i] + dp[i-j]) % MOD;
 
     printf("%d\n", dp[N]);
+    return 0;
 }
